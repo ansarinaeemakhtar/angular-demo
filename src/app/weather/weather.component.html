@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <h2>Yahoo! Weather</h2>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Entery city" [(ngModel)]="id_city"><br>
+        <input type="text" class="form-control" placeholder="Enter state" [(ngModel)]="id_state"><br>
+        <button type="button" class="btn btn-primary" (click)="callWeatherService()">Submit</button>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h3>Weather Details</h3>
+      <p class="well lead">
+        <i>City, Country</i>: {{ this.op_city }}, {{ this.op_region }}, {{ this.op_country }}<br>
+        <i>Current Condition</i>: {{ this.op_text }}<br>
+        <i>Current Temperature</i>: {{ this.op_temp }}
+      </p>
+      <p class="text-info">
+        Total # of all the service requests including Weather, Movie, and Currency is: <span class="badge">{{ this._sharedService.totReqsMade }}</span>
+      </p>
+    </div>
+  </div>
+</div>
